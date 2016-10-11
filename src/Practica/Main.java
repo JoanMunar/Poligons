@@ -1,48 +1,54 @@
 package Practica;
 
 import java.awt.*;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
  * Created by jmunarb on 06/10/16.
  */
 public class Main {
-    static String resposta;
-    static int posx;
-    static int posy;
+    static String resposta = "";
     static Scanner sc = new Scanner(System.in);
-    static String nomColor;
 
     public static void main(String[] args) {
 
-            System.out.println("Quina figura vols dibuixar? (escull una lletra)\n" +
-                    "A. Text\n" +
-                    "B. Punt\n" +
-                    "C. Línia\n" +
-                    "D. Cercle\n" +
-                    "E. Quadrat\n" +
-                    "F. Rectangle\n" +
-                    "G. Polígon\n" +
-                    "H. Dibuixar l’històric de figures.\n" +
-                    "I. Sortir\n" +
-                    "\n" +
-                    "Resposta:");
+            menu();
 
-        resposta = sc.nextLine();
+            resposta = sc.nextLine();
 
-        if(resposta.equals("A")) {
+            if(resposta.equals("A")) {
 
-            respostaA();
+                respostaA();
 
-        } else if(resposta.equals("B")){
+            } else if(resposta.equals("B")){
 
-            respostaB();
+                respostaB();
 
-        } else if(resposta.equals("C")){
+            } else if(resposta.equals("C")){
 
-            respostaC();
+                respostaC();
 
-        }
+            }
+
+
+    }
+
+    public static void menu(){
+
+        System.out.println("Quina figura vols dibuixar? (escull una lletra)\n" +
+                "A. Text\n" +
+                "B. Punt\n" +
+                "C. Línia\n" +
+                "D. Cercle\n" +
+                "E. Quadrat\n" +
+                "F. Rectangle\n" +
+                "G. Polígon\n" +
+                "H. Dibuixar l’històric de figures.\n" +
+                "I. Sortir\n" +
+                "\n" +
+                "Resposta:");
+
 
     }
 
@@ -66,7 +72,6 @@ public class Main {
 
     public static void respostaB(){
 
-
         EventQueue.invokeLater(new Runnable() {
 
             public void run() {
@@ -86,7 +91,19 @@ public class Main {
 
     public static void respostaC(){
 
+        EventQueue.invokeLater(new Runnable() {
 
+            public void run() {
+
+                try {
+                    Linia frame = new Linia();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
 
     }
 

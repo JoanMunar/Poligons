@@ -9,13 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 
-public class Punt extends JFrame {
-    private String punt = ".";
+public class Linia extends JFrame {
     private int posx;
     private int posy;
     private JPanel contentPane;
 
-    public Punt() {
+    public Linia() {
 
         Scanner sc = new Scanner(System.in);
 
@@ -39,7 +38,7 @@ public class Punt extends JFrame {
     public void paint (Graphics g){
 
         super.paint(g);
-        g.drawString(punt, posx, posy);
+        g.drawLine(100,100,posx, posy);
     }
 
 }
