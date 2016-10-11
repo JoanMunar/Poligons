@@ -1,7 +1,6 @@
 package Practica;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Scanner;
 
@@ -10,25 +9,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 
-public class Text extends JFrame {
-    private String resposta = "";
+public class Punt extends JFrame {
+    private String punt = ".";
     private int posx;
     private int posy;
-    private Color nomColor;
     private JPanel contentPane;
 
-    public Text(){
+    public Punt() {
 
         Scanner sc = new Scanner(System.in);
-
-        resposta = "";
-
-        System.out.println("Introdueix el text que vols imprimir:");
-
-        resposta = sc.nextLine();
-
-        atColor ac = new atColor();
-        nomColor = ac.color;
 
         System.out.println("A quina posició X ha de estar?");
 
@@ -50,8 +39,7 @@ public class Text extends JFrame {
     public void paint (Graphics g){
 
         super.paint(g);
-        g.setColor(nomColor);
-        g.drawString(resposta, posx, posy);
+        g.drawString(punt, posx, posy);
     }
 
 }
