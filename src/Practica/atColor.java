@@ -12,7 +12,7 @@ public class atColor {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("De quin color ha de ser el text impres?\n" +
+        System.out.println("De quin color ha de ser?\n" +
                 "A. Cian\n" +
                 "B. Negre\n" +
                 "C. Vermell\n" +

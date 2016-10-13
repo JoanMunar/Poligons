@@ -9,27 +9,11 @@ import java.util.Scanner;
 public class Main {
     static String resposta = "";
     static Scanner sc = new Scanner(System.in);
+    static Figura figura;
 
     public static void main(String[] args) {
 
             menu();
-
-            resposta = sc.nextLine();
-
-            if(resposta.equals("A")) {
-
-                respostaA();
-
-            } else if(resposta.equals("B")){
-
-                respostaB();
-
-            } else if(resposta.equals("C")){
-
-                respostaC();
-
-            }
-
     }
 
     public static void menu(){
@@ -47,54 +31,36 @@ public class Main {
                 "\n" +
                 "Resposta:");
 
+        resposta = sc.nextLine();
+
+        if(resposta.equals("A")) {
+
+            figura = new Text();
+            figura.llegir();
+            cridarFinestra();
+
+        } else if(resposta.equals("B")){
+
+
+
+        } else if(resposta.equals("C")){
+
+
+        }
+
+        menu();
+
 
     }
 
-    public static void  respostaA(){
+    public static void  cridarFinestra(){
 
         EventQueue.invokeLater(new Runnable() {
 
             public void run() {
 
                 try {
-                    Text frame = new Text();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-
-    }
-
-    public static void respostaB(){
-
-        EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-
-                try {
-                    Punt frame = new Punt();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-
-    }
-
-
-    public static void respostaC(){
-
-        EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-
-                try {
-                    Linia frame = new Linia();
+                    Finestra frame = new Finestra();
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
