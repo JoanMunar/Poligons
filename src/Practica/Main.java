@@ -1,7 +1,9 @@
 package Practica;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.List;
 
 /**
  * Created by jmunarb on 06/10/16.
@@ -10,6 +12,7 @@ public class Main {
     static String resposta = "";
     static Scanner sc = new Scanner(System.in);
     static Figura figura;
+    static List<Figura> hist = new ArrayList<Figura>();
 
     public static void main(String[] args) {
 
@@ -36,32 +39,55 @@ public class Main {
         if(resposta.equals("A")) {
 
             figura = new Text();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
+
 
         } else if(resposta.equals("B")){
 
             figura = new Punt();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         } else if(resposta.equals("C")){
 
             figura = new Linia();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         } else if(resposta.equals("D")) {
 
             figura = new Cercle();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         } else if(resposta.equals("E")){
 
             figura = new Cuadrat();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         } else if(resposta.equals("F")){
 
 
+        } else if(resposta.equals("G")){
+
+
+        }else if(resposta.equals("H")){
+
+            cridarFinestra();
+
+        }else if(resposta.equals("I")){
+
+            return;
         }
 
-        figura.llegir();
-        cridarFinestra();
         menu();
-
 
     }
 

@@ -24,10 +24,28 @@ public class Finestra extends JFrame {
 
         g.setColor(Main.figura.getC().color);
 
+        if(Main.resposta.equals("H")) {
+            for(int i = 0; i < Main.hist.size(); i++) {
+                Main.figura = Main.hist.get(i);
+                ferFigura(g);
+            }
+
+        } else {
+            ferFigura(g);
+        }
+
+
+
+
+    }
+
+    void ferFigura(Graphics g) {
+
         if(Main.figura instanceof Text) {
             Text t = (Text) Main.figura;
 
             g.drawString(t.getText() ,t.getPosX(), t.getPosY());
+
         } else if(Main.figura instanceof  Linia){
 
             Linia l = (Linia) Main.figura;
@@ -67,7 +85,5 @@ public class Finestra extends JFrame {
                 g.drawArc(c.getPosX(), c.getPosY(), c.getDiametre(), c.getDiametre(), c.getArc_inicial(), c.getArc_final());
             }
         }
-
-
     }
 }
