@@ -28,6 +28,32 @@ public class Finestra extends JFrame {
             Text t = (Text) Main.figura;
 
             g.drawString(t.getText() ,t.getPosX(), t.getPosY());
+        } else if(Main.figura instanceof  Linia){
+
+            Linia l = (Linia) Main.figura;
+
+            g.drawLine(l.getPosX(), l.getPosY(), l.getPosX_final(), l.getPosY_final());
+
+        } else if(Main.figura instanceof Cuadrat){
+
+            Cuadrat c = (Cuadrat) Main.figura;
+
+            if(c.isRelleno()){
+
+                g.fillRect(c.getPosX(), c.getPosY(), c.getCostat(), c.getCostat());
+
+            }else{
+
+                g.drawRect(c.getPosX(),c.getPosY(),c.getCostat(),c.getCostat());
+
+            }
+
+        } else if(Main.figura instanceof Punt){
+
+            Punt p = (Punt) Main.figura;
+
+            g.drawString(p.getPunt(),p.getPosX(),p.getPosY());
+
         }
 
 

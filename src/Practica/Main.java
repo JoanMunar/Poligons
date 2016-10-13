@@ -36,18 +36,27 @@ public class Main {
         if(resposta.equals("A")) {
 
             figura = new Text();
-            figura.llegir();
-            cridarFinestra();
 
         } else if(resposta.equals("B")){
 
-
+            figura = new Punt();
 
         } else if(resposta.equals("C")){
 
+            figura = new Linia();
+
+        } else if(resposta.equals("D")) {
+
+
+
+        }else if(resposta.equals("E")){
+
+            figura = new Cuadrat();
 
         }
 
+        figura.llegir();
+        cridarFinestra();
         menu();
 
 
