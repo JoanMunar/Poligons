@@ -7,7 +7,6 @@ import java.awt.*;
 public class Finestra extends JFrame {
     private JPanel contentPane;
 
-
     public Finestra() {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 450, 300);
@@ -18,11 +17,8 @@ public class Finestra extends JFrame {
         setBounds(0,0,800,600);
     }
 
-    public void paint (Graphics g)
-    {
+    public void paint (Graphics g){
         super.paint(g);
-
-        g.setColor(Main.figura.getC().color);
 
         if(Main.resposta.equals("H")) {
             for(int i = 0; i < Main.hist.size(); i++) {
@@ -31,15 +27,15 @@ public class Finestra extends JFrame {
             }
 
         } else {
+
             ferFigura(g);
         }
-
-
-
 
     }
 
     void ferFigura(Graphics g) {
+
+        g.setColor(Main.figura.getC().color);
 
         if(Main.figura instanceof Text) {
             Text t = (Text) Main.figura;
