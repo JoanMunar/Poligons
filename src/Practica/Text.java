@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 
 
 public class Text extends JFrame {
+
     private String resposta = "";
     private int posx;
     private int posy;

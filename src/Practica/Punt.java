@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 
 public class Punt extends JFrame {
+
     private String punt = ".";
     private int posx;
     private int posy;

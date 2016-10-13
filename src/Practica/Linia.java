@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 
 public class Linia extends JFrame {
+
     private int posx;
     private int posy;
     private JPanel contentPane;
