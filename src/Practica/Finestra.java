@@ -54,6 +54,18 @@ public class Finestra extends JFrame {
 
             g.drawString(p.getPunt(),p.getPosX(),p.getPosY());
 
+        } else if(Main.figura instanceof Cercle){
+
+            Cercle c = (Cercle) Main.figura;
+
+            if(c.isRelleno()){
+
+                g.fillArc(c.getPosX(), c.getPosY(), c.getDiametre(), c.getDiametre(), c.getArc_inicial(), c.getArc_final());
+
+            }else {
+
+                g.drawArc(c.getPosX(), c.getPosY(), c.getDiametre(), c.getDiametre(), c.getArc_inicial(), c.getArc_final());
+            }
         }
 
 

@@ -47,11 +47,14 @@ public class Main {
 
         } else if(resposta.equals("D")) {
 
+            figura = new Cercle();
 
-
-        }else if(resposta.equals("E")){
+        } else if(resposta.equals("E")){
 
             figura = new Cuadrat();
+
+        } else if(resposta.equals("F")){
+
 
         }
 
