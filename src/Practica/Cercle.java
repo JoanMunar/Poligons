@@ -28,7 +28,7 @@ public class Cercle extends Figura{
 
         System.out.print("De quin tamany vols el cercle --> ");
         diametre = sc.nextInt();
-        System.out.println("Relleno? S/n");
+        System.out.println("Relleno? S/N");
         relleno = sc.next().equals("S");
     }
 }

@@ -15,7 +15,7 @@ public class Main {
     static List<Figura> hist = new ArrayList<Figura>();
 
     public static void main(String[] args) {
-
+        /**Obrim menu**/
             menu();
     }
 
@@ -36,6 +36,7 @@ public class Main {
 
         resposta = sc.nextLine();
 
+        /**Diferents respostes**/
         if(resposta.equals("A")) {
 
             figura = new Text();
@@ -74,8 +75,13 @@ public class Main {
 
         } else if(resposta.equals("F")){
 
+            figura = new Rectangle();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         } else if(resposta.equals("G")){
+
 
 
         }else if(resposta.equals("H")){
@@ -92,7 +98,7 @@ public class Main {
     }
 
     public static void  cridarFinestra(){
-
+        /**Cridam la finestra**/
         EventQueue.invokeLater(new Runnable() {
 
             public void run() {

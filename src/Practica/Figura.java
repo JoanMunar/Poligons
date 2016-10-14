@@ -23,7 +23,6 @@ public class Figura {
     void llegir() {
         c = new atColor();
 
-
         sc.useDelimiter(System.getProperty("line.separator"));
 
         System.out.print("PosX --> ");
