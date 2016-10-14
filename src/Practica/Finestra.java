@@ -108,7 +108,16 @@ public class Finestra extends JFrame {
 
         }else if(Main.figura instanceof Poligon){
 
+            Poligon p = (Poligon) Main.figura;
 
+            if(p.isRelleno()){
+
+
+
+            }else{
+
+
+            }
 
         }
     }
