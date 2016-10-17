@@ -82,7 +82,10 @@ public class Main {
 
         } else if(resposta.equals("G")){
 
-
+            figura = new Poligon();
+            figura.llegir();
+            hist.add(figura);
+            cridarFinestra();
 
         }else if(resposta.equals("H")){
 

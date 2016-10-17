@@ -112,11 +112,11 @@ public class Finestra extends JFrame {
 
             if(p.isRelleno()){
 
-
+                g.fillPolygon(p.getCoordX(),p.getCoordY(),p.getNum_costats());
 
             }else{
 
-
+                g.drawPolygon(p.getCoordX(),p.getCoordY(),p.getNum_costats());
 
             }
 

@@ -6,7 +6,17 @@ public class Poligon extends Figura{
     private int[] coordY;
     private boolean relleno;
 
+    public int[] getCoordX() {
+        return coordX;
+    }
 
+    public int[] getCoordY() {
+        return coordY;
+    }
+
+    public int getNum_costats() {
+        return num_costats;
+    }
 
     public boolean isRelleno() {
         return relleno;
@@ -19,19 +29,19 @@ public class Poligon extends Figura{
         System.out.print("Numero de costats --> ");
         num_costats = sc.nextInt();
 
-        coordX = new int[num_costats + 1];
-        coordY = new int[num_costats + 1];
+        coordX = new int[num_costats];
+        coordY = new int[num_costats];
 
 
         for (int i = 0; i < coordX.length; i++) {
 
             System.out.println("Coordenades de X -->");
 
-
+            coordX[i] = sc.nextInt();
 
             System.out.println("Coordenades de Y -->");
 
-
+            coordY[i] = sc.nextInt();
 
         }
 
