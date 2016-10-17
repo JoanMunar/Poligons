@@ -11,7 +11,7 @@ public class Text extends Figura{
     void llegir() {
         super.llegir();
 
-        System.out.print("Introduce un texto --> ");
+        System.out.print("Introdueix un text --> ");
         text = sc.next();
     }
 }
